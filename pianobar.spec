@@ -9,7 +9,7 @@ URL:		http://6xq.net/html/00/17.html
 Source0:	http://6xq.net/static/projects/pianobar/pianobar-%{version}.tar.bz2
 
 BuildRequires:	make libao-devel libxml2-devel faad2 libmad-devel
-BuildRequires:	libfaad2-devel
+BuildRequires:	libfaad2-devel gnutls-devel
 
 %description
  "pianobar" supports all important features pandora has:
