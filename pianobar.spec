@@ -1,5 +1,5 @@
 Name:		pianobar
-Version:	2011.12.11
+Version:	2012.04.24
 Release:	1
 Summary:	Pianobar is a native, CLI client to Pandora.com
 
