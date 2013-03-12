@@ -6,7 +6,7 @@ Summary:	Pianobar is a native, CLI client to Pandora.com
 Group:		Sound
 License:	AS-IS
 URL:		http://6xq.net/html/00/17.html
-Source0:	http://6xq.net/static/projects/pianobar/pianobar-%{version}.tar.bz2
+Source0:	http://6xq.net/static/projects/pianobar/%{name}-%{version}.tar.bz2
 
 BuildRequires:	make
 BuildRequires:	libao-devel
