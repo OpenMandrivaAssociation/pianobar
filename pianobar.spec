@@ -1,6 +1,6 @@
 Name:		pianobar
 Version:	2012.04.24
-Release:	1
+Release:	2
 Summary:	Pianobar is a native, CLI client to Pandora.com
 
 Group:		Sound
@@ -8,8 +8,13 @@ License:	AS-IS
 URL:		http://6xq.net/html/00/17.html
 Source0:	http://6xq.net/static/projects/pianobar/pianobar-%{version}.tar.bz2
 
-BuildRequires:	make libao-devel libxml2-devel faad2 libmad-devel
-BuildRequires:	libfaad2-devel gnutls-devel
+BuildRequires:	make
+BuildRequires:	libao-devel
+BuildRequires:	libxml2-devel
+BuildRequires:	faad2
+BuildRequires:	libmad-devel
+BuildRequires:	libfaad2-devel
+BuildRequires:	gnutls-devel
 
 %description
  "pianobar" supports all important features pandora has:
@@ -18,6 +23,7 @@ BuildRequires:	libfaad2-devel gnutls-devel
  * "Shared stations"
  * last.fm scrobbling
  * Proxy support for non-americans
+ 
 %prep
 %setup -q
 
