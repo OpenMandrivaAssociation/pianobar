@@ -9,10 +9,10 @@ URL:		http://6xq.net/html/00/17.html
 Source0:	http://6xq.net/static/projects/pianobar/%{name}-%{version}.tar.bz2
 
 BuildRequires:	make
-BuildRequires:	libao-devel
-BuildRequires:	libxml2-devel
+BuildRequires:	pkgconfig(ao)
+BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	faad2
-BuildRequires:	libmad-devel
+BuildRequires:	pkgconfig(mad)
 BuildRequires:	libfaad2-devel
 BuildRequires:	gnutls-devel
 
