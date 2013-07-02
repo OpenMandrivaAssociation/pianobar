@@ -1,6 +1,6 @@
 Name:		pianobar
 Version:	2012.04.24
-Release:	3
+Release:	4
 Summary:	Native, CLI client to Pandora.com
 
 Group:		Sound
@@ -32,7 +32,7 @@ gmake
 gmake VERBOSE=1 %{?_smp_mflags}
 
 %install
-gmake install PREFIX=usr DESTDIR=$RPM_BUILD_ROOT
+gmake install PREFIX=usr DESTDIR=%{buildroot}
 
 %check
 
