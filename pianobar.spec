@@ -1,8 +1,9 @@
+%define debug_package %{nil}
+
 Name:		pianobar
 Version:	2012.04.24
 Release:	4
 Summary:	Native, CLI client to Pandora.com
-
 Group:		Sound
 License:	AS-IS
 URL:		http://6xq.net/html/00/17.html
