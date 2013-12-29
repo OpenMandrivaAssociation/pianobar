@@ -2,7 +2,7 @@
 
 Name:		pianobar
 Version:	2012.04.24
-Release:	4
+Release:	5
 Summary:	Native, CLI client to Pandora.com
 Group:		Sound
 License:	AS-IS
