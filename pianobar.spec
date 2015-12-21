@@ -1,8 +1,8 @@
 %define debug_package %{nil}
 
 Name:		pianobar
-Version:	2012.04.24
-Release:	6
+Version:	2015.11.22
+Release:	1
 Summary:	Native, CLI client to Pandora.com
 Group:		Sound
 License:	AS-IS
@@ -12,9 +12,8 @@ Source0:	http://6xq.net/static/projects/pianobar/%{name}-%{version}.tar.bz2
 BuildRequires:	make
 BuildRequires:	pkgconfig(ao)
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	faad2
 BuildRequires:	pkgconfig(mad)
-BuildRequires:	libfaad2-devel
+BuildRequires:	faad2-devel
 BuildRequires:	gnutls-devel
 
 %description
@@ -33,11 +32,11 @@ gmake
 gmake VERBOSE=1 %{?_smp_mflags}
 
 %install
-gmake install PREFIX=usr DESTDIR=%{buildroot}
+gmake install PREFIX=/usr DESTDIR=%{buildroot}
 
 %check
 
 %files
-%doc COPYING INSTALL README
+%doc COPYING INSTALL README.md
 %{_bindir}/*
 %{_mandir}/man1/*
