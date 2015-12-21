@@ -11,10 +11,10 @@ Source0:	http://6xq.net/static/projects/pianobar/%{name}-%{version}.tar.bz2
 
 BuildRequires:	make
 BuildRequires:	pkgconfig(ao)
+BuildRequires:	pkgconfig(json-c)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(mad)
 BuildRequires:	pkgconfig(libcurl)
-BuildRequires:	pkgconfig(json)
 BuildRequires:	ffmpeg-devel
 BuildRequires:	faad2-devel
 BuildRequires:	gnutls-devel
