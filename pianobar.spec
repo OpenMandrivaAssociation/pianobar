@@ -13,6 +13,9 @@ BuildRequires:	make
 BuildRequires:	pkgconfig(ao)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(mad)
+BuildRequires:	pkgconfig(libcurl)
+BuildRequires:	pkgconfig(json)
+BuildRequires:	ffmpeg-devel
 BuildRequires:	faad2-devel
 BuildRequires:	gnutls-devel
 
