@@ -17,9 +17,9 @@ BuildRequires:	pkgconfig(mad)
 BuildRequires:	pkgconfig(libcurl)
 BuildRequires: pkgconfig(libgcrypt)
 BuildRequires:	ffmpeg-devel
+BuildRequires:	pkgconfig(gnutls)
 # Restricted repo
-#BuildRequires:	faad2-devel
-BuildRequires:	gnutls-devel
+BuildRequires:	pkgconfig(faad2)
 
 %description
  "pianobar" supports all important features pandora has:
@@ -33,10 +33,14 @@ BuildRequires:	gnutls-devel
 %autosetup -p1
 
 %build
-%make_build
+%make_build DYNLINK=1 V=1
 
 %install
-%make_install
+%make_install DYNLINK=1 PREFIX="%{_prefix}" LIBDIR="%{_libdir}"
+
+# Fix shared library permissions
+	
+chmod +x %{buildroot}%{_libdir}/libpiano.so.0.0.0
 
 %files
 %doc COPYING INSTALL
