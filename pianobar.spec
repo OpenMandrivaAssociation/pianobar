@@ -39,6 +39,6 @@ BuildRequires:	gnutls-devel
 %make_install
 
 %files
-%doc COPYING INSTALL README.md
+%doc COPYING INSTALL
 #{_bindir}/*
 #{_mandir}/man1/*
