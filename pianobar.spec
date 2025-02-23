@@ -1,13 +1,13 @@
 %define debug_package %{nil}
 
 Name:		pianobar
-Version:	2015.11.22
+Version:	2024.12.21
 Release:	1
 Summary:	Native, CLI client to Pandora.com
 Group:		Sound
 License:	AS-IS
 URL:		https://6xq.net/html/00/17.html
-Source0:	http://6xq.net/static/projects/pianobar/%{name}-%{version}.tar.bz2
+Source0:	https://6xq.net/static/projects/pianobar/%{name}-%{version}.tar.bz2
 
 BuildRequires:	make
 BuildRequires:	pkgconfig(ao)
@@ -16,7 +16,8 @@ BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(mad)
 BuildRequires:	pkgconfig(libcurl)
 BuildRequires:	ffmpeg-devel
-BuildRequires:	faad2-devel
+# Restricted repo
+#BuildRequires:	faad2-devel
 BuildRequires:	gnutls-devel
 
 %description
@@ -28,16 +29,14 @@ BuildRequires:	gnutls-devel
  * Proxy support for non-americans
  
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-gmake
-gmake VERBOSE=1 %{?_smp_mflags}
+%make
+%make_build
 
 %install
-gmake install PREFIX=/usr DESTDIR=%{buildroot}
-
-%check
+%make_install
 
 %files
 %doc COPYING INSTALL README.md
