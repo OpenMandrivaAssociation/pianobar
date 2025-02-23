@@ -15,6 +15,7 @@ BuildRequires:	pkgconfig(json-c)
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(mad)
 BuildRequires:	pkgconfig(libcurl)
+BuildRequires: pkgconfig(libgcrypt)
 BuildRequires:	ffmpeg-devel
 # Restricted repo
 #BuildRequires:	faad2-devel
@@ -32,7 +33,6 @@ BuildRequires:	gnutls-devel
 %autosetup -p1
 
 %build
-%make
 %make_build
 
 %install
