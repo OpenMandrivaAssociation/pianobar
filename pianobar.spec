@@ -44,6 +44,9 @@ This package contains the shared library files.
 Summary:        Development files for %{name}
 Requires:	%{libname} = %{EVRD}
 Requires:	%{name} = %{EVRD} 
+
+%description -n %{devname}
+This package contains development files for %{name}.
  
 %prep
 %autosetup -p1
